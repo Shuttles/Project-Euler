@@ -37,6 +37,7 @@ int main() {
 
 inline int add_to_num(int x, int *num) {
     while (x) {
+        if (x % 10 == 0) return 0;
         if (num[x % 10]) return 0;
         num[x % 10] += 1;
         x /= 10;
