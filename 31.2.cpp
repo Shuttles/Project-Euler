@@ -22,7 +22,7 @@ int main() {
         f[i][0] = 1;
         for (int j = 1; j <= max_n; j++) {
              f[i][j] = f[i ^ 1][j];
-             f[i][j] += f[i][j - w[k]];
+             if (j - w[k] >= 0) f[i][j] += f[i][j - w[k]];
         }
     }
     printf("%d\n", f[(max_m) % 2][max_n]);

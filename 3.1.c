@@ -12,7 +12,7 @@
 int main() {
     int64_t last_prime = 0;
     int64_t num = NUM;
-    int i;
+    int64_t i;
     for (i = 2; i * i <= num; i++) {
         while (num % i == 0) {
             num /= i;
