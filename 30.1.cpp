@@ -7,7 +7,7 @@
 //如果调用pow函数，则运行时间将是不调用的5倍！！！！
 #include <stdio.h>
 #include <math.h>
-#define MAX_N 354294
+#define MAX_N 354294//6 * 9 ^ 5;
 #define max_n 98700
 
 int is_val(int x);
