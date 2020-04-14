@@ -19,11 +19,12 @@ int main() {
 }
 
 int f(int k, int n) {
-    if (n == 0) return 1;
-    if (n < 0 || k <= 0) return 0;
+    if (n == 0) return 1;                 /*前k种钱币拼凑0便士，只有一种方法，就是什么都不要*/
+    if (n < 0) return 0;
+    if (k == 1) return 1;                 /*前三行是边界条件*/
     if (keep[k][n]) return keep[k][n];
     int temp = f(k - 1, n) + f(k, n - w[k]);
-    if ((k > 0 && k < 9) && (n >= 0 && n <= 200))
+    //if ((k > 0 && k < 9) && (n >= 0 && n <= 200)) /*泽哥写的时候加了这行，但是现在发现用不上！！！*/
         keep[k][n] = temp;
     return temp;
 }
