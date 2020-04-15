@@ -24,7 +24,7 @@ int main() {
                 f[j] += f[j - w[i]];
         }
     }
-    printf("%d\n", f[max_n] % 9973);
+    printf("%d\n", f[max_n]);
     return 0;
 }
 
