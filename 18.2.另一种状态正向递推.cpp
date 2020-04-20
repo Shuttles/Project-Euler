@@ -30,6 +30,7 @@ int main() {
         }
     }
     cout << dfs(0, 0, 15) << endl;
+    /*下面是输出调试*/
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j <= i; j++) {
             printf("%d ", keep[i][j]);

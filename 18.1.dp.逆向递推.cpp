@@ -12,16 +12,19 @@ using namespace std;
 int val[max_n + 5][max_n + 5];
 
 int main() {
+    /*输入*/
     for (int i = 0; i < max_n; i++) {
         for (int j = 0; j <= i; j++) {
             cin >> val[i][j];
         }
     }
+    /*dp逆向实现过程*/
     for (int i = 1; i < max_n; i++) {
         for (int j = 0; j <= i; j++) {
             val[i][j] += max(val[i - 1][j], val[i - 1][j - 1]);
         }
     }
+    /*找结果*/
     int ans = 0;
     for (int i = 0; i < max_n; i++) {
         if (val[14][i] > ans) ans = val[14][i];
