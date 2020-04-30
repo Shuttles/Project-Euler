@@ -4,7 +4,7 @@
 	> Mail: 
 	> Created Time: 2019年08月14日 星期三 18时10分28秒
  ************************************************************************/
-//这种状态的定义是：dfs(i, j, n)是自下(n为底)而上到达val[i][j]时的最大值
+//这种状态的定义是：dfs(i, j, n)是从val[i][j]到最底层时的最大值
 #include <iostream>
 #include <cstdio>
 using namespace std;
